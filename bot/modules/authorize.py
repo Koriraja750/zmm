@@ -33,7 +33,7 @@ async def authorize(client, message):
         id_ in user_data
         and user_data[id_].get("is_auth")
     ):
-        msg = "Already Authorized!"
+        msg = "ᴀʟʀᴇᴀᴅʏ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ!"
     else:
         update_user_ldata(
             id_,
@@ -42,7 +42,7 @@ async def authorize(client, message):
         )
         if config_dict["DATABASE_URL"]:
             await database.update_user_data(id_)
-        msg = "Authorized"
+        msg = "ᴀᴜᴛʜᴏʀɪᴢᴇᴅ!✅"
     await send_message(
         message,
         msg
