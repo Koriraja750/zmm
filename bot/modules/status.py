@@ -68,11 +68,11 @@ async def mirror_status(_, message):
     if count == 0:
         currentTime = get_readable_time(time() - bot_start_time) # type: ignore
         free = get_readable_file_size(disk_usage(config_dict["DOWNLOAD_DIR"]).free)
-        msg = "Stop it!\nGet some help!\n\nNo Active Tasks!\n\n"
+        msg = "ʜᴇʜᴇʜᴇ!🤭\nBᴀʙʏ ɪ ᴀᴍ ꜰʀᴇᴇ!🤤\n\nMᴀᴋᴇ Mᴇ Bᴜꜱʏ 🥵\n\nNᴏ Aᴄᴛɪᴠᴇ Tᴀꜱᴋꜱ!😮‍💨\n\n"
         msg += f"Get your tasks status by adding me or user_id after cmd: /{BotCommands.StatusCommand[0]} me\n\n"
         msg += (
-            f"\n<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {free}"
-            f"\n<b>RAM:</b> {virtual_memory().percent}% | <b>UPTIME:</b> {currentTime}"
+            f"\n<b>🖥️ ᴄᴘᴜ:</b> {cpu_percent()}% | <b>🕊 Fʀᴇᴇ:</b> {free}"
+            f"\n<b>💿 ʀᴀᴍ:</b> {virtual_memory().percent}% | <b>⏰ Uᴘᴛɪᴍᴇ:</b> {currentTime}"
         )
         reply_message = await send_message(
             message,
@@ -291,17 +291,17 @@ async def stats(_, message, edit_mode=False):
     mem_p = memory.percent
     swap = swap_memory()
 
-    bot_stats = f"<b><i><u>Zee Bot Statistics</u></i></b>\n\n"\
-                f"<code>CPU  : </code>{get_progress_bar_string(cpuUsage)} {cpuUsage}%\n" \
-                f"<code>RAM  : </code>{get_progress_bar_string(mem_p)} {mem_p}%\n" \
-                f"<code>SWAP : </code>{get_progress_bar_string(swap.percent)} {swap.percent}%\n" \
-                f"<code>DISK : </code>{get_progress_bar_string(disk)} {disk}%\n\n" \
-                f"<code>Bot Uptime      : </code> {botTime}\n" \
-                f"<code>Uploaded        : </code> {sent}\n" \
-                f"<code>Downloaded      : </code> {recv}\n" \
-                f"<code>Total Bandwidth : </code> {tb}"
+    bot_stats = f"<b><i><u>🤖 Bᴏᴛ Sᴛᴀᴛɪꜱᴛɪᴄꜱ</u></i></b>\n\n"\
+                f"<b>• Cᴘᴜ  : </b>{get_progress_bar_string(cpuUsage)} {cpuUsage}%\n" \
+                f"<b>• Rᴀᴍ  : </b>{get_progress_bar_string(mem_p)} {mem_p}%\n" \
+                f"<code>• Sᴡᴀᴘ : </code>{get_progress_bar_string(swap.percent)} {swap.percent}%\n" \
+                f"<code>• Dɪꜱᴋ : </code>{get_progress_bar_string(disk)} {disk}%\n\n" \
+                f"<code>• Bᴏᴛ ᴜᴘᴛɪᴍᴇ     : </code> {botTime}\n" \
+                f"<code>• Uᴘʟᴏᴀᴅᴇᴅ        : </code> {sent}\n" \
+                f"<code>• Dᴏᴡɴʟᴏᴀᴅᴇᴅ      : </code> {recv}\n" \
+                f"<code>• Tᴏᴛᴀʟ ʙᴀɴᴅᴡɪᴅᴛʜ : </code> {tb}"
 
-    sys_stats = f"<b><i><u>Zee System Statistics</u></i></b>\n\n"\
+    sys_stats = f"<b><i><u>Sʏꜱᴛᴇᴍ Sᴛᴀᴛɪꜱᴛɪᴄꜱ</u></i></b>\n\n"\
                 f"<b>System Uptime:</b> <code>{sysTime}</code>\n" \
                 f"<b>CPU:</b> {get_progress_bar_string(cpuUsage)}<code> {cpuUsage}%</code>\n" \
                 f"<b>CPU Total Core(s):</b> <code>{cpu_count(logical=True)}</code>\n" \
@@ -484,18 +484,18 @@ async def send_repo_stats(_, query):
                 version = "N/A"
         if version != "N/A":
             if version != vtag:
-                update_info =  f"⚠️ New Version Update Available ⚠️"
+                update_info =  f"⚠️ Nᴇᴡ Vᴇʀꜱɪᴏɴ Uᴘᴅᴀᴛᴇ Aᴠᴀɪʟᴀʙʟᴇ ⚠️"
 
-    repo_stats = f"<b><i><u>Zee Repository Info</u></i></b> \n\n" \
-                 f"<b><i>Official Repository</i></b>        \n"   \
-                 f"<code>- Updated   : </code> {commit_date}\n"   \
-                 f"<code>- Version   : </code> {vtag}       \n"   \
-                 f"<code>- Changelog : </code> {c_log}      \n"   \
-                 f"<code>- Desc      : </code> {d_log}      \n\n" \
-                 f"<b><i>Bot Repository</i></b>             \n"   \
-                 f"<code>- Updated   : </code> {last_commit}\n"   \
-                 f"<code>- Version   : </code> {version}    \n"   \
-                 f"<code>- Changelog : </code> {change_log} \n\n" \
+    repo_stats = f"<b><i><u>Rᴇᴘᴏꜱɪᴛᴏʀʏ Iɴꜰᴏ</u></i></b> \n\n" \
+                 f"<b><i>Oꜰꜰɪᴄɪᴀʟ Rᴇᴘᴏꜱɪᴛᴏʀʏ</i></b>        \n"   \
+                 f"<code>- 🤖 Uᴘᴅᴀᴛᴇᴅ   : </code> {commit_date}\n"   \
+                 f"<code>- ❤️‍🔥 Vᴇʀꜱɪᴏɴ   : </code> {vtag}       \n"   \
+                 f"<code>- 📝 Cʜᴀɴɢᴇʟᴏɢ : </code> {c_log}      \n"   \
+                 f"<code>- 📋 Dᴇꜱᴄ      : </code> {d_log}      \n\n" \
+                 f"<b><i>Bᴏᴛ Rᴇᴘᴏꜱɪᴛᴏʀʏ</i></b>             \n"   \
+                 f"<code>- 🤖 Uᴘᴅᴀᴛᴇᴅ   : </code> {last_commit}\n"   \
+                 f"<code>- ❤️‍🔥 Vᴇʀꜱɪᴏɴ   : </code> {version}    \n"   \
+                 f"<code>- 📝 Cʜᴀɴɢᴇʟᴏɢ : </code> {change_log} \n\n" \
                  f"<b>{update_info}</b>"
 
     buttons.data_button(
