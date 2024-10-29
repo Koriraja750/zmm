@@ -373,23 +373,23 @@ async def get_user_settings(from_user):
     )
 
     text = f"""
-<u>Settings for {name}</u>
+<u>𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀 𝗳𝗼𝗿 {name}</u>
 
-<code>TG Premium Status:</code> <b>{IS_PREMIUM_USER}</b>
+<code>𝗧𝗚 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 𝗦𝘁𝗮𝘁𝘂𝘀:</code> <b>{IS_PREMIUM_USER}</b>
 
-<code>Leech Type       :</code> <b>{ltype}</b>
-<code>Leech Prefix     :</code> <b>{lprefix}</b>
-<code>Leech Suffix     :</code> <b>{lsuffix}</b>
-<code>Leech Cap Font   :</code> <b>{lcapfont}</b>
-<code>Leech Split Size :</code> <b>{split_size}</b>
-<code>Leech Dest       :</code> <b>{leech_dest}</b>
-<code>Metadata Text    :</code> <b>{metatxt}</b>
-<code>Attachment Url   :</code> <b>{attachmenturl}</b>
+<code>𝗟𝗲𝗲𝗰𝗵 𝗧𝘆𝗽𝗲       :</code> <b>{ltype}</b>
+<code>𝗟𝗲𝗲𝗰𝗵 𝗣𝗿𝗲𝗳𝗶𝘅     :</code> <b>{lprefix}</b>
+<code>𝗟𝗲𝗲𝗰𝗵 𝗦𝘂𝗳𝗳𝗶𝘅     :</code> <b>{lsuffix}</b>
+<code>𝗟𝗲𝗲𝗰𝗵 𝗖𝗮𝗽 𝗙𝗼𝗻𝘁   :</code> <b>{lcapfont}</b>
+<code>𝗟𝗲𝗲𝗰𝗵 𝗦𝗽𝗹𝗶𝘁 𝗦𝗶𝘇𝗲 :</code> <b>{split_size}</b>
+<code>𝗟𝗲𝗲𝗰𝗵 𝗗𝗲𝘀𝘁       :</code> <b>{leech_dest}</b>
+<code>𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮 𝗧𝗲𝘅𝘁    :</code> <b>{metatxt}</b>
+<code>𝗔𝘁𝘁𝗮𝗰𝗵𝗺𝗲𝗻𝘁 𝗨𝗿𝗹   :</code> <b>{attachmenturl}</b>
 
-<code>Thumbnail        :</code> <b>{thumbmsg}</b>
-<code>Thumb Layout     :</code> <b>{thumb_layout}</b>
-<code>Equal Splits     :</code> <b>{equal_splits}</b>
-<code>Media Group      :</code> <b>{media_group}</b>
+<code>𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹        :</code> <b>{thumbmsg}</b>
+<code>𝗧𝗵𝘂𝗺𝗯 𝗟𝗮𝘆𝗼𝘂𝘁     :</code> <b>{thumb_layout}</b>
+<code>𝗘𝗾𝘂𝗮𝗹 𝗦𝗽𝗹𝗶𝘁𝘀     :</code> <b>{equal_splits}</b>
+<code>𝗠𝗲𝗱𝗶𝗮 𝗚𝗿𝗼𝘂𝗽      :</code> <b>{media_group}</b>
 <code>Upload Client    :</code> <b>{leech_method} session</b>
 <code>Hybrid Upload    :</code> <b>{mixed_leech}</b>
 
