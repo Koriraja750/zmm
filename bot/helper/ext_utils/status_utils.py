@@ -31,20 +31,20 @@ SIZE_UNITS = [
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Upload 📤"
-    STATUS_DOWNLOADING = "Download 📥"
-    STATUS_CLONING = "Clone 🔃"
-    STATUS_QUEUEDL = "QueueDL ⏳"
-    STATUS_QUEUEUP = "QueueUL ⏳"
-    STATUS_PAUSED = "Paused ⛔️"
-    STATUS_ARCHIVING = "Archive 🛠"
-    STATUS_EXTRACTING = "Extract 📂"
-    STATUS_SPLITTING = "Split ✂️"
+    STATUS_UPLOADING = "Uᴘʟᴏᴀᴅɪɴɢ...📤"
+    STATUS_DOWNLOADING = "Dᴏᴡɴʟᴏᴀᴅɪɴɢ...📥"
+    STATUS_CLONING = "Cʟᴏɴᴇɪɴɢ...🔃"
+    STATUS_QUEUEDL = "QᴜᴇᴜᴇDL ⏳"
+    STATUS_QUEUEUP = "QᴜᴇᴜᴇUL ⏳"
+    STATUS_PAUSED = "Pᴀᴜꜱᴇᴅ ⛔️"
+    STATUS_ARCHIVING = "Aʀᴄʜɪᴠᴇ 🛠"
+    STATUS_EXTRACTING = "Exᴛʀᴀᴄᴛɪɴɢ...📂"
+    STATUS_SPLITTING = "​Sᴘʟɪᴛɪɴɢ...✂️"
     STATUS_CHECKING = "CheckUp ⏱"
     STATUS_SEEDING = "Seed 🌧"
     STATUS_SAMVID = "SampleVid 🎬"
     STATUS_CONVERTING = "Convert ♻️"
-    STATUS_METADATA = "Metadata 📝"
+    STATUS_METADATA = "Mᴇᴛᴀᴅᴀᴛᴀ Uᴘᴅᴀᴛɪɴɢ...📝"
 
 
 STATUSES = {
@@ -191,8 +191,8 @@ def get_progress_bar_string(pct):
         100
     )
     cFull = int(p // 10)
-    p_str = "█" * cFull
-    p_str += "▒" * (10 - cFull)
+    p_str = "▣" * cFull
+    p_str += "▢" * (10 - cFull)
     return f"{p_str}"
 
 
@@ -252,15 +252,15 @@ async def get_readable_message(
             and int(config_dict["AUTO_DELETE_MESSAGE_DURATION"]) > 0
         ):
             msg += (
-                f"<b><i>\n#Zee{index + start_position}: "
-                f"{escape(f"{task.name()}")}\n</i></b>"
+                f"<b>\n#Tᴀꜱᴋ{index + start_position}:</b> "
+                f"<code>{escape(f"{task.name()}")}</code>\n"
                 if elapse <= config_dict["AUTO_DELETE_MESSAGE_DURATION"]
-                else f"\n<b>#Zee{index + start_position}...(Processing)</b>"
+                else f"\n<b>#Tᴀꜱᴋ{index + start_position}...(Processing)</b>"
             )
         else:
             msg += (
-                f"<b><i>\n#Zee{index + start_position}: "
-                f"{escape(f"{task.name()}")}\n</i></b>"
+                f"<b>\n#Tᴀꜱᴋ{index + start_position}:</b> "
+                f"<code>{escape(f"{task.name()}")}</code>\n"
             )
         if tstatus not in [
             MirrorStatus.STATUS_SEEDING,
@@ -274,16 +274,17 @@ async def get_readable_message(
                 else task.progress()
             )
             msg += (
-                f"\n{get_progress_bar_string(progress)} » <b><i>{progress}</i></b>"
-                f"\n<code>Status :</code> <b>{tstatus}</b>"
-                f"\n<code>Done   :</code> {task.processed_bytes()} of {task.size()}"
-                f"\n<code>Speed  :</code> {task.speed()}"
-                f"\n<code>ETA    :</code> {task.eta()}"
-                f"\n<code>Past   :</code> {elapsed}"
-                f"\n<code>User   :</code> <b>{user_tag}</b>"
-                f"\n<code>UserID :</code> ||{task.listener.user_id}||"
-                f"\n<code>Upload :</code> {task.listener.mode}"
-                f"\n<code>Engine :</code> <b><i>{task.engine}</i></b>"
+                f"\n <a href='https://t.me/iTS_ViSHWA14>⚡ Vΐຮhwα ⚡</a>\n\n"
+                f"\n{get_progress_bar_string(progress)} » <code>♻️{progress}</code>"
+                f"\n<b>✨ Sᴛᴀᴛᴜꜱ :</b> <b>{tstatus}</b>"
+                f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> {task.processed_bytes()} of {task.size()}"
+                f"\n<b>⚡ Sᴘᴇᴇᴅ  :</b> {task.speed()}"
+                f"\n<b>⏳ ETA    :</b> {task.eta()}"
+                f"\n<b>⌛ Pᴀꜱᴛ   :</b> {elapsed}"
+                f"\n<b>👤 Uꜱᴇʀ   :</b> <b>{user_tag}</b>"
+                f"\n<b>🆔 UꜱᴇʀID :</b> ||{task.listener.user_id}||"
+                f"\n<b>🛠 Uᴘʟᴏᴀᴅ :</b> {task.listener.mode}"
+                f"\n<b>🚀 Eɴɢɪɴᴇ :</b> <code>{task.engine}</code>"
             )
             if hasattr(
                 task,
@@ -351,7 +352,7 @@ async def get_readable_message(
     if len(tasks) > STATUS_LIMIT:
         msg += f"<b>Tasks:</b> {tasks_no} | <b>Step:</b> {page_step}\n"
         buttons.data_button(
-            "⫷",
+            "⋞",
             f"status {sid} pre",
             position="header"
         )
@@ -361,7 +362,7 @@ async def get_readable_message(
             position="header"
         )
         buttons.data_button(
-            "⫸",
+            "⋟",
             f"status {sid} nex",
             position="header"
         )
@@ -394,11 +395,11 @@ async def get_readable_message(
                 )
     button = buttons.build_menu(8)
     msg += (
-        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
-        f"<b>CPU</b>: {cpu_percent()}% | "
-        f"<b>FREE</b>: {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}\n"
-        f"<b>RAM</b>: {virtual_memory().percent}% | "
-        f"<b>UPTM</b>: {get_readable_time(time() - bot_start_time)}"
+        "𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬:<a href='https://t.me/ViSHWA_MOViEX'>𝗩𝗶𝗦𝗛𝗪𝗔 𝗠𝗢𝗩𝗶𝗘𝗫</a>\n\n•• ━━━━━ ••●•• ━━━━━ ••\n"
+        f"<b>🖥️ᴄᴘᴜ</b>: {cpu_percent()}% | "
+        f"<b>📭Fʀᴇᴇ</b>: {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}\n"
+        f"<b>💿Rᴀᴍ</b>: {virtual_memory().percent}% | "
+        f"<b>⏰Uᴘᴛɪᴍᴇ</b>: {get_readable_time(time() - bot_start_time)}"
     )
     return (
         msg,
