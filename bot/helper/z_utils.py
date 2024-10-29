@@ -91,9 +91,9 @@ async def stop_duplicate_tasks(message, link, file_=None):
         )
         exist = await database.check_download(raw_url) # type: ignore
         if exist:
-            _msg = f'<b>Download is already added by {exist["tag"]}</b>\n'
-            _msg += f'Check the download status in @{exist["botname"]}\n\n'
-            _msg += f'<b>Link</b>: <code>{exist["_id"]}</code>'
+            _msg = f'<b>ᴅᴏᴡɴʟᴏᴀᴅ ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴅᴅᴇᴅ ʙʏ {exist["tag"]}</b>\n'
+            _msg += f'ᴄʜᴇᴄᴋ ᴛʜᴇ ᴅᴏᴡɴʟᴏᴀᴅ sᴛᴀᴛᴜs ɪɴ @{exist["botname"]}\n\n'
+            _msg += f'<b>Lɪɴᴋ</b>: <code>{exist["_id"]}</code>'
             reply_message = await send_message(
                 message,
                 _msg
