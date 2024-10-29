@@ -128,7 +128,7 @@ async def ping(_, message):
     start_time = int(round(time() * 1000))
     reply = await send_message(
         message,
-        "Starting Ping"
+        "ꜱᴛᴀʀᴛɪɴɢ ᴘɪɴɢ...!"
     )
     end_time = int(round(time() * 1000))
     await edit_message(
@@ -257,12 +257,12 @@ async def restart_notification():
         if notifier_dict := await database.get_incomplete_tasks():
             for cid, data in notifier_dict.items():
                 msg = (
-                    "Restarted Successfully!"
+                    "ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!🚀"
                     if cid == chat_id
-                    else "Bot Restarted!"
+                    else "ʙᴏᴛ ʀᴇꜱᴛᴀʀᴛᴇᴅ!🚀"
                 )
                 for tag, links in data.items():
-                    msg += f"\n\n👤 {tag} Do your tasks again. \n"
+                    msg += f"\n\n👤 {tag} ᴅᴏ ʏᴏᴜʀ ᴛᴀꜱᴋꜱ ᴀɢᴀɪɴ.♻\n"
                     for index, link in enumerate(
                         links,
                         start=1
@@ -287,7 +287,7 @@ async def restart_notification():
             await bot.edit_message_text( # type: ignore
                 chat_id=chat_id,
                 message_id=msg_id,
-                text="Restarted Successfully!"
+                text="ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!🚀"
             )
         except:
             pass
