@@ -547,7 +547,7 @@ class TaskConfig:
                     raise ValueError("You must use the same config to clone!")
         else:
             if self.message.chat.type != self.message.chat.type.SUPERGROUP: # type: ignore
-                raise ValueError("Leech is not allowed in private!\nUse me in a supergroup!")
+                raise ValueError("ʟᴇᴇᴄʜ ɪꜱ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ!\nᴜꜱᴇ ᴍᴇ ɪɴ ᴀ ꜱᴜᴘᴇʀɢʀᴏᴜᴘ!")
             self.up_dest = (
                 self.up_dest
                 or self.user_dict.get("leech_dest")
