@@ -68,7 +68,7 @@ async def mirror_status(_, message):
     if count == 0:
         currentTime = get_readable_time(time() - bot_start_time) # type: ignore
         free = get_readable_file_size(disk_usage(config_dict["DOWNLOAD_DIR"]).free)
-        msg = "ʜᴇʜᴇʜᴇ!🤭\nBᴀʙʏ ɪ ᴀᴍ ꜰʀᴇᴇ!🤤\n\nMᴀᴋᴇ Mᴇ Bᴜꜱʏ 🥵\n\nNᴏ Aᴄᴛɪᴠᴇ Tᴀꜱᴋꜱ!😮‍💨\n\n"
+        msg = "<b>Bᴀʙʏ ɪ ᴀᴍ ꜰʀᴇᴇ!🕊</b>\n\n<b>Nᴏ Aᴄᴛɪᴠᴇ Tᴀꜱᴋꜱ!😮‍💨</b>\n\n"
         msg += f"Get your tasks status by adding me or user_id after cmd: /{BotCommands.StatusCommand[0]} me\n\n"
         msg += (
             f"\n<b>🖥️ ᴄᴘᴜ:</b> {cpu_percent()}% | <b>🕊 Fʀᴇᴇ:</b> {free}"
@@ -294,12 +294,12 @@ async def stats(_, message, edit_mode=False):
     bot_stats = f"<b><i><u>🤖 Bᴏᴛ Sᴛᴀᴛɪꜱᴛɪᴄꜱ</u></i></b>\n\n"\
                 f"<b>• Cᴘᴜ  : </b>{get_progress_bar_string(cpuUsage)} {cpuUsage}%\n" \
                 f"<b>• Rᴀᴍ  : </b>{get_progress_bar_string(mem_p)} {mem_p}%\n" \
-                f"<code>• Sᴡᴀᴘ : </code>{get_progress_bar_string(swap.percent)} {swap.percent}%\n" \
-                f"<code>• Dɪꜱᴋ : </code>{get_progress_bar_string(disk)} {disk}%\n\n" \
-                f"<code>• Bᴏᴛ ᴜᴘᴛɪᴍᴇ     : </code> {botTime}\n" \
-                f"<code>• Uᴘʟᴏᴀᴅᴇᴅ        : </code> {sent}\n" \
-                f"<code>• Dᴏᴡɴʟᴏᴀᴅᴇᴅ      : </code> {recv}\n" \
-                f"<code>• Tᴏᴛᴀʟ ʙᴀɴᴅᴡɪᴅᴛʜ : </code> {tb}"
+                f"<b>• Sᴡᴀᴘ : </b>{get_progress_bar_string(swap.percent)} {swap.percent}%\n" \
+                f"<b>• Dɪꜱᴋ : </b>{get_progress_bar_string(disk)} {disk}%\n\n" \
+                f"<b>• Bᴏᴛ ᴜᴘᴛɪᴍᴇ      : </b> {botTime}\n" \
+                f"<b>• Uᴘʟᴏᴀᴅᴇᴅ        : </b> {sent}\n" \
+                f"<b>• Dᴏᴡɴʟᴏᴀᴅᴇᴅ      : </b> {recv}\n" \
+                f"<b>• Tᴏᴛᴀʟ ʙᴀɴᴅᴡɪᴅᴛʜ : </b> {tb}"
 
     sys_stats = f"<b><i><u>Sʏꜱᴛᴇᴍ Sᴛᴀᴛɪꜱᴛɪᴄꜱ</u></i></b>\n\n"\
                 f"<b>System Uptime:</b> <code>{sysTime}</code>\n" \
@@ -488,14 +488,14 @@ async def send_repo_stats(_, query):
 
     repo_stats = f"<b><i><u>Rᴇᴘᴏꜱɪᴛᴏʀʏ Iɴꜰᴏ</u></i></b> \n\n" \
                  f"<b><i>Oꜰꜰɪᴄɪᴀʟ Rᴇᴘᴏꜱɪᴛᴏʀʏ</i></b>        \n"   \
-                 f"<code>- 🤖 Uᴘᴅᴀᴛᴇᴅ   : </code> {commit_date}\n"   \
-                 f"<code>- ❤️‍🔥 Vᴇʀꜱɪᴏɴ   : </code> {vtag}       \n"   \
-                 f"<code>- 📝 Cʜᴀɴɢᴇʟᴏɢ : </code> {c_log}      \n"   \
-                 f"<code>- 📋 Dᴇꜱᴄ      : </code> {d_log}      \n\n" \
+                 f"<b>- 🤖 Uᴘᴅᴀᴛᴇᴅ   : </b> {commit_date}\n"   \
+                 f"<b>- ❤️‍🔥 Vᴇʀꜱɪᴏɴ   : </b> {vtag}       \n"   \
+                 f"<b>- 📝 Cʜᴀɴɢᴇʟᴏɢ : </b> {c_log}      \n"   \
+                 f"<b>- 📋 Dᴇꜱᴄ      : </b> {d_log}      \n\n" \
                  f"<b><i>Bᴏᴛ Rᴇᴘᴏꜱɪᴛᴏʀʏ</i></b>             \n"   \
-                 f"<code>- 🤖 Uᴘᴅᴀᴛᴇᴅ   : </code> {last_commit}\n"   \
-                 f"<code>- ❤️‍🔥 Vᴇʀꜱɪᴏɴ   : </code> {version}    \n"   \
-                 f"<code>- 📝 Cʜᴀɴɢᴇʟᴏɢ : </code> {change_log} \n\n" \
+                 f"<b>- 🤖 Uᴘᴅᴀᴛᴇᴅ   : </b> {last_commit}\n"   \
+                 f"<b>- ❤️‍🔥 Vᴇʀꜱɪᴏɴ   : </b> {version}    \n"   \
+                 f"<b>- 📝 Cʜᴀɴɢᴇʟᴏɢ : </b> {change_log} \n\n" \
                  f"<b>{update_info}</b>"
 
     buttons.data_button(
