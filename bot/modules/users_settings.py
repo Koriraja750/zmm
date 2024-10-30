@@ -375,37 +375,37 @@ async def get_user_settings(from_user):
     text = f"""
 <u>𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀 𝗳𝗼𝗿 {name}</u>
 
-<code>𝗧𝗚 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 𝗦𝘁𝗮𝘁𝘂𝘀:</code> <b>{IS_PREMIUM_USER}</b>
+<b>𝗧𝗚 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 𝗦𝘁𝗮𝘁𝘂𝘀:</b> <b>{IS_PREMIUM_USER}</b>
 
-<code>𝗟𝗲𝗲𝗰𝗵 𝗧𝘆𝗽𝗲       :</code> <b>{ltype}</b>
-<code>𝗟𝗲𝗲𝗰𝗵 𝗣𝗿𝗲𝗳𝗶𝘅     :</code> <b>{lprefix}</b>
-<code>𝗟𝗲𝗲𝗰𝗵 𝗦𝘂𝗳𝗳𝗶𝘅     :</code> <b>{lsuffix}</b>
-<code>𝗟𝗲𝗲𝗰𝗵 𝗖𝗮𝗽 𝗙𝗼𝗻𝘁   :</code> <b>{lcapfont}</b>
-<code>𝗟𝗲𝗲𝗰𝗵 𝗦𝗽𝗹𝗶𝘁 𝗦𝗶𝘇𝗲 :</code> <b>{split_size}</b>
-<code>𝗟𝗲𝗲𝗰𝗵 𝗗𝗲𝘀𝘁       :</code> <b>{leech_dest}</b>
-<code>𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮 𝗧𝗲𝘅𝘁    :</code> <b>{metatxt}</b>
-<code>𝗔𝘁𝘁𝗮𝗰𝗵𝗺𝗲𝗻𝘁 𝗨𝗿𝗹   :</code> <b>{attachmenturl}</b>
+<b>𝗟𝗲𝗲𝗰𝗵 𝗧𝘆𝗽𝗲       :</b> <b>{ltype}</b>
+<b>𝗟𝗲𝗲𝗰𝗵 𝗣𝗿𝗲𝗳𝗶𝘅     :</b> <b>{lprefix}</b>
+<b>𝗟𝗲𝗲𝗰𝗵 𝗦𝘂𝗳𝗳𝗶𝘅     :</b> <b>{lsuffix}</b>
+<b>𝗟𝗲𝗲𝗰𝗵 𝗖𝗮𝗽 𝗙𝗼𝗻𝘁   :</b> <b>{lcapfont}</b>
+<b>𝗟𝗲𝗲𝗰𝗵 𝗦𝗽𝗹𝗶𝘁 𝗦𝗶𝘇𝗲 :</b> <b>{split_size}</b>
+<b>𝗟𝗲𝗲𝗰𝗵 𝗗𝗲𝘀𝘁       :</b> <b>{leech_dest}</b>
+<b>𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮 𝗧𝗲𝘅𝘁    :</b> <b>{metatxt}</b>
+<b>𝗔𝘁𝘁𝗮𝗰𝗵𝗺𝗲𝗻𝘁 𝗨𝗿𝗹   :</b> <b>{attachmenturl}</b>
 
-<code>𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹        :</code> <b>{thumbmsg}</b>
-<code>𝗧𝗵𝘂𝗺𝗯 𝗟𝗮𝘆𝗼𝘂𝘁     :</code> <b>{thumb_layout}</b>
-<code>𝗘𝗾𝘂𝗮𝗹 𝗦𝗽𝗹𝗶𝘁𝘀     :</code> <b>{equal_splits}</b>
-<code>𝗠𝗲𝗱𝗶𝗮 𝗚𝗿𝗼𝘂𝗽      :</code> <b>{media_group}</b>
-<code>Upload Client    :</code> <b>{leech_method} session</b>
-<code>Hybrid Upload    :</code> <b>{mixed_leech}</b>
+<b>𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹        :</b> <b>{thumbmsg}</b>
+<b>𝗧𝗵𝘂𝗺𝗯 𝗟𝗮𝘆𝗼𝘂𝘁     :</b> <b>{thumb_layout}</b>
+<b>𝗘𝗾𝘂𝗮𝗹 𝗦𝗽𝗹𝗶𝘁𝘀       :</b> <b>{equal_splits}</b>
+<b>𝗠𝗲𝗱𝗶𝗮 𝗚𝗿𝗼𝘂𝗽      :</b> <b>{media_group}</b>
+<b>𝗨𝗽𝗹𝗼𝗮𝗱 𝗖𝗹𝗶𝗲𝗻𝘁    :</b> <b>{leech_method} session</b>
+<b>𝗛𝘆𝗯𝗿𝗶𝗱 𝗨𝗽𝗹𝗼𝗮𝗱    :</b> <b>{mixed_leech}</b>
 
-<code>Rclone Config    :</code> <b>{rccmsg}</b>
-<code>Rclone Path      :</code> <b>{rccpath}</b>
+<b>𝗥𝗰𝗹𝗼𝗻𝗲 𝗖𝗼𝗻𝗳𝗶𝗴    :</b> <b>{rccmsg}</b>
+<b>𝗥𝗰𝗹𝗼𝗻𝗲 𝗣𝗮𝘁𝗵      :</b> <b>{rccpath}</b>
 
-<code>Gdrive Token     :</code> <b>{tokenmsg}</b>
-<code>Gdrive ID        :</code> <b>{gdrive_id}</b>
-<code>Index Link       :</code> <b>{index}</b>
+<b>𝗚𝗱𝗿𝗶𝘃𝗲 𝗧𝗼𝗸𝗲𝗻     :</b> <b>{tokenmsg}</b>
+<b>𝗚𝗱𝗿𝗶𝘃𝗲 𝗜𝗗        :</b> <b>{gdrive_id}</b>
+<b>𝗜𝗻𝗱𝗲𝘅 𝗟𝗶𝗻𝗸       :</b> <b>{index}</b>
 
-<code>Stop Duplicate   :</code> <b>{sd_msg}</b>
-<code>Default Upload   :</code> <b>{dum}</b>
-<code>Upload Paths     :</code> <b>{upload_paths}</b>
-<code>Name Substitute  :</code> <b>{ns_msg}</b>
-<code>Extension Filter :</code> <b>{ex_ex}</b>
-<code>YT-DLP Options   :</code> <b>{escape(ytopt)}</b>
+<b>𝗦𝘁𝗼𝗽 𝗗𝘂𝗽𝗹𝗶𝗰𝗮𝘁𝗲   :</b> <b>{sd_msg}</b>
+<b>𝗗𝗲𝗳𝗮𝘂𝗹𝘁 𝗨𝗽𝗹𝗼𝗮𝗱   :</b> <b>{dum}</b>
+<b>𝗨𝗽𝗹𝗼𝗮𝗱 𝗣𝗮𝘁𝗵𝘀     :</b> <b>{upload_paths}</b>
+<b>𝗡𝗮𝗺𝗲 𝗦𝘂𝗯𝘀𝘁𝗶𝘁𝘂𝘁𝗲  :</b> <b>{ns_msg}</b>
+<b>𝗘𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻 𝗙𝗶𝗹𝘁𝗲𝗿   :</b> <b>{ex_ex}</b>
+<b>𝗬𝗧-𝗗𝗟𝗣 𝗢𝗽𝘁𝗶𝗼𝗻𝘀   :</b> <b>{escape(ytopt)}</b>
 """
 
     return (
