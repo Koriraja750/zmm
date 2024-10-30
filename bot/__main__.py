@@ -260,12 +260,12 @@ async def restart_notification():
         if notifier_dict := await database.get_incomplete_tasks():
             for cid, data in notifier_dict.items():
                 msg = (
-                    "ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!🚀"
+                    "<b>ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!🚀</b>"
                     if cid == chat_id
-                    else "ʙᴏᴛ ʀᴇꜱᴛᴀʀᴛᴇᴅ!🚀"
+                    else "<b>ʙᴏᴛ ʀᴇꜱᴛᴀʀᴛᴇᴅ!🚀</b>"
                 )
                 for tag, links in data.items():
-                    msg += f"\n\n👤 {tag} ᴅᴏ ʏᴏᴜʀ ᴛᴀꜱᴋꜱ ᴀɢᴀɪɴ.♻\n"
+                    msg += f"\n\n<b>👤 {tag} ᴅᴏ ʏᴏᴜʀ ᴛᴀꜱᴋꜱ ᴀɢᴀɪɴ.♻</b>\n"
                     for index, link in enumerate(
                         links,
                         start=1
@@ -290,7 +290,7 @@ async def restart_notification():
             await bot.edit_message_text( # type: ignore
                 chat_id=chat_id,
                 message_id=msg_id,
-                text="ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!🚀"
+                text="<b>ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!🚀</b>"
             )
         except:
             pass
