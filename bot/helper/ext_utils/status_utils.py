@@ -252,6 +252,7 @@ async def get_readable_message(
             and int(config_dict["AUTO_DELETE_MESSAGE_DURATION"]) > 0
         ):
             msg += (
+                f"\n<a href='https://t.me/iTS_ViSHWA14><b>x____νιѕнωα____x</b></a>'\n\n"
                 f"<b>\n#TASK{index + start_position}:</b> "
                 f"<code>{escape(f"{task.name()}")}</code>\n"
                 if elapse <= config_dict["AUTO_DELETE_MESSAGE_DURATION"]
@@ -274,7 +275,6 @@ async def get_readable_message(
                 else task.progress()
             )
             msg += (
-                f"\n<a href='https://t.me/iTS_ViSHWA14><b>x____νιѕнωα____x</b></a>'\n\n"
                 f"\n<b>{get_progress_bar_string(progress)}</b> » <code>♻️{progress}</code>"
                 f"\n<b>✨ Sᴛᴀᴛᴜꜱ :</b> <b>{tstatus}</b>"
                 f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> {task.processed_bytes()} of {task.size()}"
