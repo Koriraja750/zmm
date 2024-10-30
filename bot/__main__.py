@@ -131,7 +131,7 @@ async def ping(_, message):
     start_time = int(round(time() * 1000))
     reply = await send_message(
         message,
-        "ꜱᴛᴀʀᴛɪɴɢ ᴘɪɴɢ...!"
+        "<b>ꜱᴛᴀʀᴛɪɴɢ ᴘɪɴɢ...!</b>"
     )
     end_time = int(round(time() * 1000))
     await edit_message(
