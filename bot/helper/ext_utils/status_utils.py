@@ -276,10 +276,10 @@ async def get_readable_message(
             msg += (
                 f"\n<b>{get_progress_bar_string(progress)}</b> » <code>♻️{progress}</code>"
                 f"\n<b>✨ Sᴛᴀᴛᴜꜱ :</b> <b>{tstatus}</b>"
-                f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> {task.processed_bytes()} of {task.size()}"
-                f"\n<b>⚡ Sᴘᴇᴇᴅ  :</b> {task.speed()}"
-                f"\n<b>⏳ ETA    :</b> {task.eta()}"
-                f"\n<b>⌛ Pᴀꜱᴛ   :</b> {elapsed}"
+                f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> <code>{task.processed_bytes()} of {task.size()}</code>"
+                f"\n<b>⚡ Sᴘᴇᴇᴅ  :</b> <code>{task.speed()}</code>"
+                f"\n<b>⏳ ETA    :</b> <code>{task.eta()}</code>"
+                f"\n<b>⌛ Pᴀꜱᴛ   :</b> <code>{elapsed}</code>"
                 f"\n<b>👤 Uꜱᴇʀ   :</b> <b>{user_tag}</b>"
                 f"\n<b>🆔 UꜱᴇʀID :</b> ||{task.listener.user_id}||"
                 f"\n<b>🛠 Uᴘʟᴏᴀᴅ :</b> {task.listener.mode}"
@@ -349,7 +349,7 @@ async def get_readable_message(
             position="footer"
         )
     if len(tasks) > STATUS_LIMIT:
-        msg += f"<b>Tasks:</b> {tasks_no} | <b>Step:</b> {page_step}\n"
+        msg += f"<b>🚧Tᴀꜱᴋꜱ:</b> {tasks_no} | <b>📑Sᴛᴇᴘꜱ:</b> {page_step}\n"
         buttons.data_button(
             "⋞",
             f"status {sid} pre",
