@@ -71,8 +71,8 @@ async def mirror_status(_, message):
         msg = "<b>Bᴀʙʏ ɪ ᴀᴍ ꜰʀᴇᴇ!🕊</b>\n\n<b>Nᴏ Aᴄᴛɪᴠᴇ Tᴀꜱᴋꜱ!😮‍💨</b>\n\n"
         msg += f"Get your tasks status by adding me or user_id after cmd: /{BotCommands.StatusCommand[0]} me\n\n"
         msg += (
-            f"\n<b>🖥️ ᴄᴘᴜ:</b> {cpu_percent()}% | <b>🕊 Fʀᴇᴇ:</b> {free}"
-            f"\n<b>💿 ʀᴀᴍ:</b> {virtual_memory().percent}% | <b>⏰ Uᴘᴛɪᴍᴇ:</b> {currentTime}"
+            f"\n<b>🖥️ ᴄᴘᴜ:</b> <code>{cpu_percent()}%</code> | <b>🕊 Fʀᴇᴇ:</b> <code>{free}</code>"
+            f"\n<b>💿 ʀᴀᴍ:</b> <code>{virtual_memory().percent}%</code> | <b>⏰ Uᴘᴛɪᴍᴇ:</b> <code>{currentTime}</code>"
         )
         reply_message = await send_message(
             message,
