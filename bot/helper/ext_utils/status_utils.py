@@ -274,7 +274,6 @@ async def get_readable_message(
                 else task.progress()
             )
             msg += (
-                f"\n <a href='https://t.me/iTS_ViSHWA14>⚡ Vΐຮhwα ⚡</a>\n\n"
                 f"\n{get_progress_bar_string(progress)} » <code>♻️{progress}</code>"
                 f"\n<b>✨ Sᴛᴀᴛᴜꜱ :</b> <b>{tstatus}</b>"
                 f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> {task.processed_bytes()} of {task.size()}"
@@ -395,7 +394,7 @@ async def get_readable_message(
                 )
     button = buttons.build_menu(8)
     msg += (
-        "𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬:<a href='https://t.me/ViSHWA_MOViEX'>𝗩𝗶𝗦𝗛𝗪𝗔 𝗠𝗢𝗩𝗶𝗘𝗫</a>\n\n•• ━━━━━ ••●•• ━━━━━ ••\n"
+        "•• ━━━━━ ••●•• ━━━━━ ••\n"
         f"<b>🖥️ᴄᴘᴜ</b>: {cpu_percent()}% | "
         f"<b>📭Fʀᴇᴇ</b>: {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}\n"
         f"<b>💿Rᴀᴍ</b>: {virtual_memory().percent}% | "
