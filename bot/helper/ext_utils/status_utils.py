@@ -274,7 +274,8 @@ async def get_readable_message(
                 else task.progress()
             )
             msg += (
-                f"\n{get_progress_bar_string(progress)} » <code>♻️{progress}</code>"
+                f"\n<a href='https://t.me/iTS_ViSHWA14><b>x____νιѕнωα____x</b></a>'\n\n"
+                f"\n<b>{get_progress_bar_string(progress)}</b> » <code>♻️{progress}</code>"
                 f"\n<b>✨ Sᴛᴀᴛᴜꜱ :</b> <b>{tstatus}</b>"
                 f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> {task.processed_bytes()} of {task.size()}"
                 f"\n<b>⚡ Sᴘᴇᴇᴅ  :</b> {task.speed()}"
