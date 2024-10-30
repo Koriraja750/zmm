@@ -252,14 +252,14 @@ async def get_readable_message(
             and int(config_dict["AUTO_DELETE_MESSAGE_DURATION"]) > 0
         ):
             msg += (
-                f"<b>\n#Tᴀꜱᴋ{index + start_position}:</b> "
+                f"<b>\n#TASK{index + start_position}:</b> "
                 f"<code>{escape(f"{task.name()}")}</code>\n"
                 if elapse <= config_dict["AUTO_DELETE_MESSAGE_DURATION"]
-                else f"\n<b>#Tᴀꜱᴋ{index + start_position}...(Processing)</b>"
+                else f"\n<b>#TASK{index + start_position}...(Processing)</b>"
             )
         else:
             msg += (
-                f"<b>\n#Tᴀꜱᴋ{index + start_position}:</b> "
+                f"<b>\n#TASK{index + start_position}:</b> "
                 f"<code>{escape(f"{task.name()}")}</code>\n"
             )
         if tstatus not in [
