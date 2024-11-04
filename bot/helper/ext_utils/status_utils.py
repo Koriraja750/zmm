@@ -399,6 +399,8 @@ async def get_readable_message(
         f"<b>📭Fʀᴇᴇ</b>: {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}\n"
         f"<b>💿Rᴀᴍ</b>: {virtual_memory().percent}% | "
         f"<b>⏰Uᴘᴛɪᴍᴇ</b>: {get_readable_time(time() - bot_start_time)}"
+        f"<b>DL: {get_readable_file_size(dl_speed)}/s</b> | "
+        f"<b>UL: {get_readable_file_size(up_speed)}/s</b> "
     )
     return (
         msg,
