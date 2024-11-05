@@ -274,7 +274,7 @@ async def get_readable_message(
                 else task.progress()
             )
             msg += (
-                f"\n   <b>{get_progress_bar_string(progress)}</b> » <code>♻️ {progress}</code>"
+                f"\n <b>{get_progress_bar_string(progress)}</b> » <code>♻️ {progress}</code>"
                 f"\n<b>✨ Sᴛᴀᴛᴜꜱ :</b> <b>{tstatus}</b>"
                 f"\n<b>🔄 Pʀᴏᴄᴇꜱꜱᴇᴅ  :</b> <code>{task.processed_bytes()} of {task.size()}</code>"
                 f"\n<b>⚡ Sᴘᴇᴇᴅ  :</b> <code>{task.speed()}</code>"
@@ -349,7 +349,7 @@ async def get_readable_message(
             position="footer"
         )
     if len(tasks) > STATUS_LIMIT:
-        msg += f"<b>🚧Tᴀꜱᴋꜱ:</b> {tasks_no} | <b>📑Sᴛᴇᴘꜱ:</b> {page_step}\n"
+        msg += f"🚧<b>Tᴀꜱᴋꜱ:</b> {tasks_no} | 📑<b>Sᴛᴇᴘꜱ:</b> {page_step}\n"
         buttons.data_button(
             "⋞",
             f"status {sid} pre",
@@ -399,8 +399,6 @@ async def get_readable_message(
         f"<b>📭Fʀᴇᴇ</b>: {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}\n"
         f"<b>💿Rᴀᴍ</b>: {virtual_memory().percent}% | "
         f"<b>⏰Uᴘᴛɪᴍᴇ</b>: {get_readable_time(time() - bot_start_time)}"
-        f"<b>DL: {get_readable_file_size(dl_speed)}/s</b> | "
-        f"<b>UL: {get_readable_file_size(up_speed)}/s</b> "
     )
     return (
         msg,
