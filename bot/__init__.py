@@ -1298,7 +1298,7 @@ BASE += ("oAtiUyppVYRQkuWg8DG2p")
 
 bot_loop = bot.loop # type: ignore
 bot_name = bot.me.username # type: ignore
-log_info(f"Starting babuuu Bot @{bot_name} DC: {bot.session.dc_id}.") # type: ignore
+log_info(f"Starting tdgaga Bot @{bot_name} DC: {bot.session.dc_id}.") # type: ignore
 
 scheduler = AsyncIOScheduler(
     timezone=str(get_localzone()),
