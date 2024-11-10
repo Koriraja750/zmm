@@ -351,7 +351,7 @@ async def main():
             ) & CustomFilters.authorized,
         )
     )
-    LOGGER.info("Bot Started Successfully!")
+    LOGGER.info("Hi Bot Started Successfully!")
     signal(
         SIGINT,
         exit_clean_up
